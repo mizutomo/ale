@@ -1,16 +1,16 @@
 " Author: Tomokatsu Mizukusa
 " Description: Adds support for Cadence Xcelium `xrun` Verilog compiler
 
+call ale#Set('verilog_xrun_executable', 'xmvlog')
+" See `$ xrun -helpall` for more options
 call ale#Set('verilog_xrun_options', '')
 
 function! ale_linters#verilog#xrun#GetCommand(buffer) abort
-    return 'xrun -compile '
-    \   . ale#Var(a:buffer, 'verilog_xrun_options')
-    \   . ' %t'
+    return '%e ' .  ale#Pad(ale#Var(a:buffer, 'verilog_xrun_options')) . ' %t'
 endfunction
 
 function! ale_linters#verilog#xrun#Handle(buffer, lines) abort
-    " Look for lines like the following.
+    " Matches patterns like the following:
     "
     " xmvlog: *E,EXPSMC (top.sv,29|9): expecting a semicolon (';') [12.1(IEEE)].
     " xmvlog: *W,NONPRT (top.v,18|31): non-printable character (0xxx) ignored.
@@ -35,7 +35,7 @@ endfunction
 call ale#linter#Define('verilog', {
 \   'name': 'xrun',
 \   'output_stream': 'stdout',
-\   'executable': 'xrun',
+\   'executable': {b -> ale#Var(b, 'verilog_xrun_executable')},
 \   'command': function('ale_linters#verilog#xrun#GetCommand'),
 \   'callback': 'ale_linters#verilog#xrun#Handle',
 \})
