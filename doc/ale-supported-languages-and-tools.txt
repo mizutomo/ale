@@ -503,6 +503,7 @@ Notes:
   * `verilator`
   * `vlog`
   * `xvlog`
+  * `xrun`
 * VHDL
   * `ghdl`
   * `vcom`

@@ -3,7 +3,7 @@ ALE Verilog/SystemVerilog Integration                     *ale-verilog-options*
 
 
 ===============================================================================
-ALE can use five different linters for Verilog HDL:
+ALE can use six different linters for Verilog HDL:
 
   HDL Checker
     Using `hdl_checker --lsp`
@@ -19,6 +19,9 @@ ALE can use five different linters for Verilog HDL:
 
   Vivado
     Using `xvlog`
+
+  Cadence/Xcelium
+    Using `xrun`
 
 By default, both 'verilog' and 'systemverilog' filetypes are checked.
 
@@ -112,6 +115,25 @@ g:ale_verilog_xvlog_options                       *g:ale_verilog_xvlog_options*
   Default: `''`
 
   This variable can be changed to modify the flags/options passed to 'xvlog'.
+
+
+===============================================================================
+xrun                                                       *ale-verilog-xrun*
+
+g:ale_verilog_xrun_executable                  *g:ale_verilog_xrun_executable*
+                                               *b:ale_verilog_xrun_executable*
+  Type: |String|
+  Default: `'xmvlog'`
+
+  This variable can be changed to the path to the 'xmvlog' executable.
+
+
+g:ale_verilog_xrun_options                        *g:ale_verilog_xrun_options*
+                                                  *b:ale_verilog_xrun_options*
+  Type: |String|
+  Default: `''`
+
+  This variable can be changed to modify the flags/options passed to 'xmvlog'.
 
 
 ===============================================================================

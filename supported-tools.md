@@ -512,9 +512,9 @@ formatting.
   * [verilator](http://www.veripool.org/projects/verilator/wiki/Intro)
   * [vlog](https://www.mentor.com/products/fv/questa/)
   * [xvlog](https://www.xilinx.com/products/design-tools/vivado.html)
+  * [xrun](https://www.cadence.com/en_US/home/tools/system-design-and-verification/simulation-and-testbench-verification/xcelium-simulator.html)
 * VHDL
-  * [ghdl](https://github.com/ghdl/ghdl)
-  * [vcom](https://www.mentor.com/products/fv/questa/)
+    * [vcom](https://www.mentor.com/products/fv/questa/)
   * [xvhdl](https://www.xilinx.com/products/design-tools/vivado.html)
 * Vim
   * [vimls](https://github.com/iamcco/vim-language-server)
