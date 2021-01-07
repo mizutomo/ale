@@ -118,18 +118,18 @@ g:ale_verilog_xvlog_options                       *g:ale_verilog_xvlog_options*
 
 
 ===============================================================================
-xrun                                                       *ale-verilog-xrun*
+xrun                                                         *ale-verilog-xrun*
 
-g:ale_verilog_xrun_executable                  *g:ale_verilog_xrun_executable*
-                                               *b:ale_verilog_xrun_executable*
+g:ale_verilog_xrun_executable                   *g:ale_verilog_xrun_executable*
+                                                *b:ale_verilog_xrun_executable*
   Type: |String|
   Default: `'xmvlog'`
 
   This variable can be changed to the path to the 'xmvlog' executable.
 
 
-g:ale_verilog_xrun_options                        *g:ale_verilog_xrun_options*
-                                                  *b:ale_verilog_xrun_options*
+g:ale_verilog_xrun_options                         *g:ale_verilog_xrun_options*
+                                                   *b:ale_verilog_xrun_options*
   Type: |String|
   Default: `''`
 
