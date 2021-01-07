@@ -18,7 +18,7 @@ function! ale_linters#verilog#xrun#Handle(buffer, lines) abort
     let l:output = []
 
     for l:match in ale#util#GetMatches(a:lines, l:pattern)
-        let l:line = l:match[3] - 1
+        let l:line = l:match[3] + 0
         let l:type = l:match[1]
         let l:text = '[' . l:match[1] . ']' . l:match[2] . ' : ' . l:match[4]
 
